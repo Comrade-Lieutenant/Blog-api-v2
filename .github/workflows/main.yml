@@ -25,7 +25,7 @@ jobs:
         run: uv sync --frozen --all-packages
 
       - name: Run Ruff (All Workspaces)
-        run: uv run ruff check .
+        run: uvx ruff check
 
       - name: Run Mypy
         env:
@@ -33,7 +33,7 @@ jobs:
           SECRET_KEY: "ci-dummy-key"
           DATABASE_URL: "sqlite:///:memory:"
           PYTHON_PATH: ${{ github.workspace }}
-        run: uv run mypy .
+        run: uvx mypy .
 
   test:
     runs-on: ubuntu-latest
