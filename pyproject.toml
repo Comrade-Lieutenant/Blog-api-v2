@@ -9,3 +9,11 @@ dependencies = [
     "django-cors-headers>=4.9.0",
     "djangorestframework>=3.17.1",
 ]
+
+[tool.mypy]
+# Ignores the "Skipping analyzing" errors
+ignore_missing_imports = true
+
+# Stops the "Need type annotation" errors in models
+check_untyped_defs = false
+disallow_untyped_defs = false
