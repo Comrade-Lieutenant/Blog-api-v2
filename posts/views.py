@@ -7,7 +7,7 @@ from .serializers import PostSerializer, UserSerializer
 
 # Viewsets allow us to combine multiple related views into a single class (can replace multiple views)
 
-'''
+"""
 class PostList(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
@@ -27,7 +27,8 @@ class UserList(generics.ListAPIView):
 class UserDetail(generics.RetrieveAPIView):
     queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
-'''
+"""
+
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()

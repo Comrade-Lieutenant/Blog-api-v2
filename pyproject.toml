@@ -10,6 +10,7 @@ dependencies = [
     "django-allauth>=65.18.0",
     "django-cors-headers>=4.9.0",
     "djangorestframework>=3.17.1",
+    "drf-spectacular>=0.29.0",
     "requests>=2.34.2",
 ]
 
@@ -20,3 +21,7 @@ ignore_missing_imports = true
 # Stops the "Need type annotation" errors in models
 check_untyped_defs = false
 disallow_untyped_defs = false
+
+[tool.ruff.format]
+# Quotation style
+quote-style = "double"
